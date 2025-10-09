@@ -1,0 +1,6 @@
+<h2>New Comment for Photo: <%= @photo.title %></h2>
+
+<%= form_with(model: [@photo, @comment]) do |f| %>
+  <%= f.text_area :body, placeholder: "Write your comment..." %>
+  <%= f.submit "Add Comment" %>
+<% end %>

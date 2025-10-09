@@ -1,0 +1,17 @@
+<h1>All Projects</h1>
+
+<%= link_to "New Project", new_admin_project_path, class: "btn btn-primary" %>
+
+<ul>
+  <% @projects.each do |project| %>
+    <li>
+      <strong><%= project.name %></strong> — <%= project.description %>
+      <br>
+      Deadline: <%= project.deadline %>
+      <br>
+      <%= link_to "Show", admin_project_path(project) %> |
+      <%= link_to "Edit", edit_admin_project_path(project) %> |
+      <%= link_to "Delete", admin_project_path(project), method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  <% end %>
+</ul>

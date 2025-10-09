@@ -1,0 +1,13 @@
+<h2>Tasks for <%= @project.name %></h2>
+
+<%= link_to "Add Task", new_admin_project_task_path(@project) %>
+<%= link_to "Back to Project", admin_project_path(@project) %>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= task.title %> - <%= task.status %> 
+      (<%= link_to "Show", admin_project_task_path(@project, task) %>)
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,2 @@
+module Photos::CommentsHelper
+end

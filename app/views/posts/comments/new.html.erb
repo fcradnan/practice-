@@ -1,0 +1,6 @@
+<h2>New Comment for Post: <%= @post.title %></h2>
+
+<%= form_with(model: [@post, @comment]) do |f| %>
+  <%= f.text_area :body, placeholder: "Write your comment..." %>
+  <%= f.submit "Add Comment" %>
+<% end %>

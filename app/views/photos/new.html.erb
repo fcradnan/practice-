@@ -1,0 +1,15 @@
+<h1>New Photo</h1>
+
+<%= form_with model: @photo do |f| %>
+  <div>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :image_url, "Photo URL" %><br>
+    <%= f.text_field :image_url %>
+  </div>
+
+  <%= f.submit "Upload Photo" %>
+<% end %>
