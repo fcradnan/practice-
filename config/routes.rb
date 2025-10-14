@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :articles
    
     resources :posts do
       resources :comments, module: :posts
@@ -22,7 +21,5 @@ Rails.application.routes.draw do
     resource  :adnan
     resource :baskets
 
-
-    
 end
 
